@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../assets//background.jpg');
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h1 {
+    color: wheat;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 230px;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.card img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.card img:hover {
+    transform: scale(1.2);
+    transition: all 1s;
+
+}
+
+.card .text {
+    text-align: start;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 4px;
+    width: 60%;
+    height: 100%;
+    transform-origin: left;
+    transform: rotateY(90deg);
+    perspective: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card:hover .text {
+    transform: rotateY(0deg);
+    transition: all 1s;
+}
